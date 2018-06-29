@@ -1,2 +1,2 @@
 # tictactoe
-Tictactoe game - an Elixir project
+Tic-tac-toe game - an Elixir project
