@@ -102,7 +102,8 @@ defmodule Tictactoe do
   defp has_kids(game), do: Enum.member?(List.flatten(game.board.state), "_")
 
   @doc """
-  generates all possible kids for a given board, but only the first generation of kids, i.e. all boards which come from adding only 1 symbol to the current board
+  generates all possible kids for a given board, but only the first generation of kids, i.e. all boards
+  which come from adding only 1 symbol to the current board
   """
   def gen_kids(game), do: gen_kids_helper(game, game.board.nextSym, has_kids(game))
 
@@ -319,7 +320,8 @@ defmodule Tictactoe do
 
   @doc """
   the main function to call to play against the unbeatable bot
-  this function calls all of the above functions to calculate the heuristic value of each node by generating a list of its kids and choosing the best kid to play
+  this function calls all of the above functions to calculate the heuristic value of each node
+  by generating a list of its kids and choosing the best kid to play
   """
   def bot(), do: play(start_new(), xwins(start_new()), owins(start_new()), draw(start_new()))
 
@@ -393,7 +395,9 @@ defmodule Tictactoe do
   end
 
   @doc """
-  the main function to call to play against another player by taking turns; doesnt use any algorithm, only the try_input_x and try_input_o functions, so that players cant place a symbol on an occupied space
+  the main function to call to play against another player by taking turns;
+  doesnt use any algorithm, only the try_input_x and try_input_o functions,
+  so that players cant place a symbol on an occupied space
   """
   def player(), do: user_play(start_new())
 end
