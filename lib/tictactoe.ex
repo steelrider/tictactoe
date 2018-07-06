@@ -1,6 +1,8 @@
 defmodule Tictactoe do
   @moduledoc """
   this is the Tictactoe module, where you can play vs bot or vs player
+  1. vs bot - play by calling Tictactoe.bot()
+  2. vs player - play by calling Tictactoe.player()
   """
   @doc """
   this is the carrier of the game board
