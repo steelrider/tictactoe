@@ -107,7 +107,7 @@ defmodule Tictactoe do
   """
   def gen_kids(game), do: gen_kids_helper(game, game.board.nextSym, has_kids(game))
 
-  defp gen_kids_helper(_, _, false), do: IO.puts("here")
+  defp gen_kids_helper(_, _, false), do: nil
 
   defp gen_kids_helper(game, "X", true) do
     Enum.filter(
